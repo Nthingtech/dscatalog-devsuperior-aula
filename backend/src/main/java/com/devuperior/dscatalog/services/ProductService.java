@@ -42,6 +42,7 @@ public class ProductService {
 		Product entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
 		return new ProductDTO(entity, entity.getCategories());
 	}
+	
 	@Transactional
 	public ProductDTO insert(ProductDTO dto) {
 		Product entity = new Product();
