@@ -48,8 +48,7 @@ public class ProductService {
 		Product entity = new Product();
 		copyDtoToEntity(dto, entity);
 		entity = repository.save(entity);
-		return new ProductDTO(entity);
-				
+		return new ProductDTO(entity);			
 	}
 	
 	@Transactional
@@ -63,7 +62,6 @@ public class ProductService {
 		catch (EntityNotFoundException e) {
 			throw new ResourceNotFoundException("Id not found " + id);		
 		}
-		
 	}
 
 	public void delete(Long id) {
@@ -89,8 +87,6 @@ public class ProductService {
 		for (CategoryDTO catDto : dto.getCategories()) {
 			Category category = categoryRepository.getOne(catDto.getId());
 			entity.getCategories().add(category);
-		}
-		
+		}	
 	}
-
 }

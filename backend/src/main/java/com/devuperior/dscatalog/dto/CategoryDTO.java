@@ -10,8 +10,7 @@ public class CategoryDTO implements Serializable {
 	private Long id;
 	private String name;
 	
-	public CategoryDTO() {
-		
+	public CategoryDTO() {	
 	}
 
 	public CategoryDTO(Long id, String name) {
@@ -39,9 +38,4 @@ public class CategoryDTO implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
-	
-	
-
 }

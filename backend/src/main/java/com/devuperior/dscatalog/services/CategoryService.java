@@ -36,14 +36,13 @@ public class CategoryService {
 		Category entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
 		return new CategoryDTO(entity);
 	}
+	
 	@Transactional
 	public CategoryDTO insert(CategoryDTO dto) {
 		Category entity = new Category();
 		entity.setName(dto.getName());
 		entity = repository.save(entity);
 		return new CategoryDTO(entity);
-		
-		
 	}
 	
 	@Transactional
@@ -56,8 +55,7 @@ public class CategoryService {
 		}
 		catch (EntityNotFoundException e) {
 			throw new ResourceNotFoundException("Id not found " + id);		
-		}
-		
+		}	
 	}
 
 	public void delete(Long id) {
@@ -71,5 +69,4 @@ public class CategoryService {
 			throw new DatabaseException("Integrity Violation");
 		}
 	}
-
 }
