@@ -15,7 +15,7 @@
 	<description>DSCatalog DevSuperior</description>
 	<properties>
 		<java.version>11</java.version>
-		<log4j2.version>2.16.0</log4j2.version>
+		<log4j2.version>2.17.1</log4j2.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -51,6 +51,15 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 	</dependencies>
 
